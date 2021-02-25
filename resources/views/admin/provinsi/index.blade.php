@@ -2,7 +2,6 @@
 @section('content')
 <div class="row">
 	<div class="col-md-12 col-md-offset-2">
-
         <a href="{{route('provinsi.create')}}" class="btn btn-primary float-right btn-sm"><i class="fas fa-plus-circle"></i> Tambah Data</a>
         <div class="box">
 			<div class="box-body">
@@ -27,7 +26,7 @@
 
 
                     <thead>
-                        <div type="button" class="btn btn-primary">Primary</div>
+
                         <tr>
                             <th>No</th>
                             <th style='text-align:center;vertical-align:middle'>Kode Provinsi</th>
