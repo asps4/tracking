@@ -41,14 +41,9 @@
 
   <!-- ======= Top Bar ======= -->
 
-
-  <!-- ======= Header ======= -->
-
-
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="col-md-12 text-center">
-    <h3 class="light white">Kawal Corona | Tracking COVID-19</h3>
     <h1 class="white typed">Coronavirus Global & Indonesia Live Data</h1>
   </section><!-- End Hero -->
 
