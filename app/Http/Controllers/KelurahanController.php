@@ -17,9 +17,9 @@ class KelurahanController extends Controller
     {
         //
         $title = 'List Kelurahan';
-        $kelurahan = Kelurahan::all();
         $kecamatan = Kecamatan::all();
-        return view("admin.Kelurahan.index", compact("kelurahan","title","kecamatan"));
+        $kelurahan = Kelurahan::all();
+        return view("admin.kelurahan.index", compact("kecamatan",'title','kelurahan'));
     }
 
     /**
