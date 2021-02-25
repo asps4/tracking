@@ -41,17 +41,18 @@ class FontController extends Controller
     $tanggal = Carbon::now()->format('D d-M-Y h:i:s');
 
     // Table Provinsi
-    $tampil = DB::table('provinsis')
-    ->select('provinsis.kode_nama','provinsis.nama_provinsi',
-    DB::raw('SUM(prakerins.jumlah_positif) as Positif'),
-    DB::raw('SUM(prakerins.jumlah_sembuh) as Sembuh'),
-    DB::raw('SUM(prakerins.jumlah_meninggal) as Meninggal'))
-    ->join('kotas','provinsis.id','=','kotas.id_provinsi')
-    ->join('kecamatans','kotas.id','=','kecamatans.id_kota')
-    ->join('kelurahans','kecamatans.id','=','kelurahans.id_kecamatan')
-    ->join('rws','kelurahans.id','=','rws.id_kelurahan')
-    ->join('prakerins','rws.id','=','prakerins.id_rw')
-    ->groupBy('provinsis.id')->orderBy('nama_provinsi','ASC')
+
+    $provinsi = DB::table('provinsis')
+    ->select('provinsis.id', 'provinsis.nama_provinsi', 'provinsis.kode_provinsi',
+        DB::raw('sum(prakerins.positif) as positif'),
+        DB::raw('sum(prakerins.sembuh) as sembuh'),
+        DB::raw('sum(prakerins.meninggal) as meninggal'))
+    ->join('kotas', 'provinsis.id', '=', 'kotas.id_provinsi')
+    ->join('kecamatans', 'kotas.id', '=', 'kecamatans.id_kota')
+    ->join('kelurahans', 'kecamatans.id', '=', 'kelurahans.id_kecamatan')
+    ->join('rws', 'kelurahans.id', '=', 'rws.id_kelurahan')
+    ->join('prakerins', 'rws.id', '=', 'prakerins.id_rw')
+    ->groupBy('provinsis.id')
     ->get();
 
     return view('font.index',compact('positif','sembuh','meninggal','posglobal','semglobal','menglobal', 'tanggal','tampil','dunia'));
