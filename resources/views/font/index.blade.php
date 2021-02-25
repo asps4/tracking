@@ -201,13 +201,13 @@
                   @php $no=1; @endphp
                                                 @foreach($tampil as $tmp)
 
-                                            <tr>
-                                                <th>{{$no++ }}</th>
-                                                <th>{{$tmp->nama_provinsi}}</th>
-                                                <th>{{number_format($tmp->Positif)}}</th>
-                                                <th>{{number_format($tmp->Sembuh)}}</th>
-                                                <th>{{number_format($tmp->Meninggal)}}</th>
-                                            </tr>
+                                                <tr>
+                                                    <th>{{$no++ }}</th>
+                                                    <th>{{$tmp->nama_provinsi}}</th>
+                                                    <th>{{number_format($tmp->Positif)}}</th>
+                                                    <th>{{number_format($tmp->Sembuh)}}</th>
+                                                    <th>{{number_format($tmp->Meninggal)}}</th>
+                                                </tr>
                     @endforeach
 
                 </tbody>
