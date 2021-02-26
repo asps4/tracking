@@ -25,20 +25,20 @@ class FontController extends Controller
         'prakerins.jumlah_sembuh','prakerins.jumlah_meninggal')
         ->join('prakerins','rws.id','=','prakerins.id_rw')
         ->sum('prakerins.jumlah_meninggal');
-    $globalpositif = file_get_contents('https://api.kawalcorona.com/positif');
-    $posglobal = json_decode($globalpositif, TRUE);
-    $globalsembuh= file_get_contents('https://api.kawalcorona.com/sembuh');
-    $semglobal = json_decode($globalsembuh, TRUE);
-    $globalmeninggal = file_get_contents('https://api.kawalcorona.com/meninggal');
-    $menglobal = json_decode($globalmeninggal, TRUE);
-    // Date
-    $dataid = file_get_contents("https://api.kawalcorona.com/indonesia");
-    $id = json_decode($dataid, TRUE);
-    $dataidprovinsi = file_get_contents("https://api.kawalcorona.com/indonesia/provinsi");
-    $idprovinsi = json_decode($dataidprovinsi, TRUE);
-    $datadunia= file_get_contents("https://api.kawalcorona.com/");
-    $dunia = json_decode($datadunia, TRUE);
-    $tanggal = Carbon::now()->format('D d-M-Y h:i:s');
+    // $globalpositif = file_get_contents('https://api.kawalcorona.com/positif');
+    // $posglobal = json_decode($globalpositif, TRUE);
+    // $globalsembuh= file_get_contents('https://api.kawalcorona.com/sembuh');
+    // $semglobal = json_decode($globalsembuh, TRUE);
+    // $globalmeninggal = file_get_contents('https://api.kawalcorona.com/meninggal');
+    // $menglobal = json_decode($globalmeninggal, TRUE);
+    // // Date
+    // $dataid = file_get_contents("https://api.kawalcorona.com/indonesia");
+    // $id = json_decode($dataid, TRUE);
+    // $dataidprovinsi = file_get_contents("https://api.kawalcorona.com/indonesia/provinsi");
+    // $idprovinsi = json_decode($dataidprovinsi, TRUE);
+    // $datadunia= file_get_contents("https://api.kawalcorona.com/");
+    // $dunia = json_decode($datadunia, TRUE);
+    // $tanggal = Carbon::now()->format('D d-M-Y h:i:s');
 
     // Table Provinsi
     $tampil = DB::table('provinsis')
@@ -54,7 +54,7 @@ class FontController extends Controller
     ->groupBy('provinsis.id')->orderBy('nama_provinsi','ASC')
     ->get();
 
-    return view('font.index',compact('positif','sembuh','meninggal','posglobal','semglobal','menglobal', 'tanggal','tampil','dunia'));
+    return view('font.index',compact('positif','sembuh','meninggal'));
     }
 
 }

@@ -59,7 +59,7 @@
           <div class="d-flex">
            <div class="text-white">
             <p class="text-white mb-0">TOTAL POSITIF</p>
-            <h2 class="mb-0 number-font"><?php echo $posglobal['value'] ?></h2>
+            <h2 class="mb-0 number-font">0</h2>
             <p class="text-white mb-0">ORANG</p>
            </div>
            <div class="ml-auto"> <img src="{{asset('assets/img/sad-u6e.png')}}" width="50" height="50" alt="Positif"> </div>
@@ -73,7 +73,7 @@
           <div class="d-flex">
            <div class="text-white">
             <p class="text-white mb-0">TOTAL SEMBUH</p>
-            <h2 class="mb-0 number-font"><?php echo $semglobal['value'] ?></h2>
+            <h2 class="mb-0 number-font">0</h2>
             <p class="text-white mb-0">ORANG</p>
            </div>
            <div class="ml-auto"> <img src="{{asset('assets/img/happy-ipM.png')}}" width="50" height="50" alt="Positif"> </div>
@@ -87,7 +87,7 @@
           <div class="d-flex">
            <div class="text-white">
             <p class="text-white mb-0">TOTAL MENINGGAL</p>
-            <h2 class="mb-0 number-font"><?php echo $menglobal['value'] ?></h2>
+            <h2 class="mb-0 number-font">0</h2>
             <p class="text-white mb-0">ORANG</p>
            </div>
            <div class="ml-auto"> <img src="{{asset('assets/img/emoji-LWx.png')}}" width="50" height="50" alt="Positif"> </div>
@@ -113,7 +113,7 @@
     </section><!-- End Why Us Section -->
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    {{-- <section id="about" class="about">
       <div class="container-fluid">
 
         <div class="card-header ">
@@ -124,9 +124,9 @@
         <div class="col-lg-1"></div>
         <div class="col-lg-10">
         <div class="card">
-        <div class="col text-center">
-                                        <h6><br><p>Update terakhir : {{ $tanggal }}</p></h6>
-                                    </div>
+                <div class="col text-center">
+                                                <h6><br><p>Update terakhir : {{ $tanggal }}</p></h6>
+                                            </div>
         <section id="kasusdunia" class="kasusdunia"><center>
           <div class="card-header">Data Kasus Corona Virus Berdasarkan Negara</div></center>
           <div class="card-body">
@@ -164,7 +164,7 @@
                 <br>
 
         </div>
-    </div>
+    </div> --}}
 </div>
 </div>
 </div>
@@ -175,7 +175,7 @@
     </section><!-- End About Section -->
 
     <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
+    {{-- <section id="counts" class="counts">
       <div class="container">
         <div class="card-header ">
             &nbsp;
@@ -221,7 +221,7 @@
             &nbsp;
 
       </div>
-    </section><!-- End Counts Section -->
+    </section><!-- End Counts Section --> --}}
 
     <div class="container d-md-flex py-4">
 
