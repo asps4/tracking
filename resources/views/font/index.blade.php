@@ -59,7 +59,7 @@
           <div class="d-flex">
            <div class="text-white">
             <p class="text-white mb-0">TOTAL POSITIF</p>
-            <h2 class="mb-0 number-font">0</h2>
+            <h2 class="mb-0 number-font"><b>{{$positif}}</b></h2>
             <p class="text-white mb-0">ORANG</p>
            </div>
            <div class="ml-auto"> <img src="{{asset('assets/img/sad-u6e.png')}}" width="50" height="50" alt="Positif"> </div>
@@ -73,7 +73,7 @@
           <div class="d-flex">
            <div class="text-white">
             <p class="text-white mb-0">TOTAL SEMBUH</p>
-            <h2 class="mb-0 number-font">0</h2>
+            <h2 class="mb-0 number-font"><b>{{$sembuh}}</b></h2>
             <p class="text-white mb-0">ORANG</p>
            </div>
            <div class="ml-auto"> <img src="{{asset('assets/img/happy-ipM.png')}}" width="50" height="50" alt="Positif"> </div>
@@ -87,7 +87,7 @@
           <div class="d-flex">
            <div class="text-white">
             <p class="text-white mb-0">TOTAL MENINGGAL</p>
-            <h2 class="mb-0 number-font">0</h2>
+            <h2 class="mb-0 number-font"><b>{{$meninggal}}</b></h2>
             <p class="text-white mb-0">ORANG</p>
            </div>
            <div class="ml-auto"> <img src="{{asset('assets/img/emoji-LWx.png')}}" width="50" height="50" alt="Positif"> </div>
@@ -110,9 +110,13 @@
         </div><!-- COL END -->
         </div>
 
-    </section><!-- End Why Us Section -->
+    </section>
+    <!-- End Why Us Section -->
+    {{-- <div class="chart-wrapper">
+        <canvas id="deals" class="chart-dropshadow-success chartjs-render-monitor" hidden=""
+            height="85" width="0" style="display: block; width: 0px; height: 85px;"></canvas>
+    </div> --}}
 
-    <!-- ======= About Section ======= -->
     {{-- <section id="about" class="about">
       <div class="container-fluid">
 
@@ -125,8 +129,8 @@
         <div class="col-lg-10">
         <div class="card">
                 <div class="col text-center">
-                                                <h6><br><p>Update terakhir : {{ $tanggal }}</p></h6>
-                                            </div>
+             <h6><br><p>Update terakhir : {{ $tanggal }}</p></h6>
+                </div>
         <section id="kasusdunia" class="kasusdunia"><center>
           <div class="card-header">Data Kasus Corona Virus Berdasarkan Negara</div></center>
           <div class="card-body">
@@ -164,7 +168,7 @@
                 <br>
 
         </div>
-    </div> --}}
+    </div>
 </div>
 </div>
 </div>
@@ -172,10 +176,10 @@
 </header>
 
       </div>
-    </section><!-- End About Section -->
+    </section><!-- End About Section --> --}}
 
     <!-- ======= Counts Section ======= -->
-    {{-- <section id="counts" class="counts">
+    <section id="counts" class="counts">
       <div class="container">
         <div class="card-header ">
             &nbsp;
@@ -221,7 +225,8 @@
             &nbsp;
 
       </div>
-    </section><!-- End Counts Section --> --}}
+    </section>
+    <!-- End Counts Section -->
 
     <div class="container d-md-flex py-4">
 
@@ -267,3 +272,48 @@
 </body>
 
 </html>
+{{-- @section('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script>
+        var tanggal = <?php echo $casesTanggal; ?>;    var positif = <?php echo $casesPositif; ?>;    var sembuh = <?php echo $casesSembuh; ?>;    var meninggal = <?php echo $casesMeninggal; ?>;    var barChartData = {
+            labels: tanggal,
+            datasets: [{
+                label: 'Positif',
+                backgroundColor: "rgba(252, 186, 3)",
+                data: positif
+            }, {
+                label: 'Sembuh',
+                backgroundColor: "rgba(11, 212, 64)",
+                data: sembuh
+
+            }, {
+                label: 'Meninggal',
+                backgroundColor: "rgba(227, 69, 25)",
+                data: meninggal
+            }]
+        };
+
+        var ctx = document.getElementById('myChart');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: barChartData,
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                },
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Kasus Covid-19 Indonesia'
+                }
+            }
+        });
+
+    </script>
+
+
+@endsection --}}

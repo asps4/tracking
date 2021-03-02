@@ -54,7 +54,160 @@ class FontController extends Controller
     ->groupBy('provinsis.id')->orderBy('nama_provinsi','ASC')
     ->get();
 
-    return view('font.index',compact('positif','sembuh','meninggal'));
+     // chart
+//      $casesSembuh = DB::table('prakerins')
+//      ->select(
+//          DB::raw('sum(prakerins.sembuh) as sembuh'), )
+//      ->orderBy('prakerins.tanggal')
+//      ->groupBy('prakerins.tanggal')->pluck('sembuh');
+//  $casesPositif = DB::table('prakerins')
+//      ->select(
+//          DB::raw('sum(prakerins.positif) as positif'), )
+//      ->orderBy('prakerins.tanggal')
+//      ->groupBy('prakerins.tanggal')->pluck('positif');
+
+//  $casesMeninggal = DB::table('prakerins')
+//      ->select(
+//          DB::raw('sum(prakerins.meninggal) as meninggal'), )
+//      ->orderBy('prakerins.tanggal')
+//      ->groupBy('prakerins.tanggal')->pluck('meninggal');
+//  $casesTanggal = DB::table('prakerins')
+//      ->select(
+//          DB::raw('prakerins.tanggal'), )
+//      ->orderBy('prakerins.tanggal')
+//      ->groupBy('prakerins.tanggal')->pluck('tanggal');
+
+    return view('font.index',compact('tampil','positif','sembuh','meninggal'));
+
+
     }
+    // public function about()
+    // {
+
+    // }
+
+    // public function getKotaProvinsi($id)
+    // {
+
+    //     $positif = DB::table('kotas')
+    //         ->select('kotas.nama_kota', 'kotas.kode_kota',
+    //             DB::raw('sum(prakerins.positif) as positif'),
+    //             DB::raw('sum(prakerins.sembuh) as sembuh'),
+    //             DB::raw('sum(prakerins.meninggal) as meninggal'))
+    //         ->join('provinsis', 'provinsis.id', '=', 'kotas.id_provinsi')
+    //         ->join('kecamatans', 'kotas.id', '=', 'kecamatans.id_kota')
+    //         ->join('kelurahans', 'kecamatans.id', '=', 'kelurahans.id_kecamatan')
+    //         ->join('rws', 'kelurahans.id', '=', 'rws.id_kelurahan')
+    //         ->join('prakerins', 'rws.id', '=', 'prakerins.id_rw')
+    //         ->where('provinsis.id', $id)
+    //         ->groupBy('kotas.id')
+    //         ->sum('prakerins.positif');
+
+    //     $sembuh = DB::table('kotas')
+    //         ->select('kotas.nama_kota', 'kotas.kode_kota',
+    //             DB::raw('sum(prakerins.positif) as positif'),
+    //             DB::raw('sum(prakerins.sembuh) as sembuh'),
+    //             DB::raw('sum(prakerins.meninggal) as meninggal'))
+    //         ->join('provinsis', 'provinsis.id', '=', 'kotas.id_provinsi')
+    //         ->join('kecamatans', 'kotas.id', '=', 'kecamatans.id_kota')
+    //         ->join('kelurahans', 'kecamatans.id', '=', 'kelurahans.id_kecamatan')
+    //         ->join('rws', 'kelurahans.id', '=', 'rws.id_kelurahan')
+    //         ->join('prakerins', 'rws.id', '=', 'prakerins.id_rw')
+    //         ->where('provinsis.id', $id)
+    //         ->groupBy('kotas.id')
+    //         ->sum('prakerins.sembuh');
+
+    //     $meninggal = DB::table('kotas')
+    //         ->select('kotas.nama_kota', 'kotas.kode_kota',
+    //             DB::raw('sum(prakerins.positif) as positif'),
+    //             DB::raw('sum(prakerins.sembuh) as sembuh'),
+    //             DB::raw('sum(prakerins.meninggal) as meninggal'))
+    //         ->join('provinsis', 'provinsis.id', '=', 'kotas.id_provinsi')
+    //         ->join('kecamatans', 'kotas.id', '=', 'kecamatans.id_kota')
+    //         ->join('kelurahans', 'kecamatans.id', '=', 'kelurahans.id_kecamatan')
+    //         ->join('rws', 'kelurahans.id', '=', 'rws.id_kelurahan')
+    //         ->join('prakerins', 'rws.id', '=', 'prakerins.id_rw')
+    //         ->where('provinsis.id', $id)
+    //         ->groupBy('kotas.id')
+    //         ->sum('prakerins.meninggal');
+
+    //     $datas = DB::table('kotas')
+    //         ->select('kotas.id', 'kotas.nama_kota', 'kotas.kode_kota',
+    //             DB::raw('sum(prakerins.positif) as positif'),
+    //             DB::raw('sum(prakerins.sembuh) as sembuh'),
+    //             DB::raw('sum(prakerins.meninggal) as meninggal'))
+    //         ->join('provinsis', 'provinsis.id', '=', 'kotas.id_provinsi')
+    //         ->join('kecamatans', 'kotas.id', '=', 'kecamatans.id_kota')
+    //         ->join('kelurahans', 'kecamatans.id', '=', 'kelurahans.id_kecamatan')
+    //         ->join('rws', 'kelurahans.id', '=', 'rws.id_kelurahan')
+    //         ->join('prakerins', 'rws.id', '=', 'prakerins.id_rw')
+    //         ->where('provinsis.id', $id)
+    //         ->groupBy('kotas.id')
+    //         ->get();
+    //     // dd($positif);
+    //     $provinsi = Provinsi::findOrFail($id);
+    //     return view('singleProvinsi', compact('datas', 'sembuh', 'meninggal', 'positif', 'provinsi'));
+    // }
+
+    // public function getKecamatanKota($id)
+    // {
+
+    //     $positif = DB::table('kecamatans')
+    //         ->select('kecamatans.nama_kecamatan',
+    //             DB::raw('sum(prakerins.positif) as positif'),
+    //             DB::raw('sum(prakerins.sembuh) as sembuh'),
+    //             DB::raw('sum(prakerins.meninggal) as meninggal'))
+    //         ->join('kotas', 'kotas.id', '=', 'kecamatans.id_kota')
+    //         ->join('kelurahans', 'kecamatans.id', '=', 'kelurahans.id_kecamatan')
+    //         ->join('rws', 'kelurahans.id', '=', 'rws.id_kelurahan')
+    //         ->join('prakerins', 'rws.id', '=', 'prakerins.id_rw')
+    //         ->where('kotas.id', $id)
+    //         ->groupBy('kecamatans.id')
+    //         ->sum('prakerins.positif');
+
+    //     $sembuh = DB::table('kotas')
+    //         ->select('kecamatans.nama_kecamatan',
+    //             DB::raw('sum(prakerins.positif) as positif'),
+    //             DB::raw('sum(prakerins.sembuh) as sembuh'),
+    //             DB::raw('sum(prakerins.meninggal) as meninggal'))
+    //     // ->join('provinsis','provinsis.id','=','kotas.id_provinsi')
+    //         ->join('kecamatans', 'kotas.id', '=', 'kecamatans.id_kota')
+    //         ->join('kelurahans', 'kecamatans.id', '=', 'kelurahans.id_kecamatan')
+    //         ->join('rws', 'kelurahans.id', '=', 'rws.id_kelurahan')
+    //         ->join('prakerins', 'rws.id', '=', 'prakerins.id_rw')
+    //         ->where('kotas.id', $id)
+    //         ->groupBy('kecamatans.id')
+    //         ->sum('prakerins.sembuh');
+
+    //     $meninggal = DB::table('kotas')
+    //         ->select('kecamatans.nama_kecamatan',
+    //             DB::raw('sum(prakerins.positif) as positif'),
+    //             DB::raw('sum(prakerins.sembuh) as sembuh'),
+    //             DB::raw('sum(prakerins.meninggal) as meninggal'))
+    //     // ->join('provinsis','provinsis.id','=','kotas.id_provinsi')
+    //         ->join('kecamatans', 'kotas.id', '=', 'kecamatans.id_kota')
+    //         ->join('kelurahans', 'kecamatans.id', '=', 'kelurahans.id_kecamatan')
+    //         ->join('rws', 'kelurahans.id', '=', 'rws.id_kelurahan')
+    //         ->join('prakerins', 'rws.id', '=', 'prakerins.id_rw')
+    //         ->where('kotas.id', $id)
+    //         ->groupBy('kecamatans.id')
+    //         ->sum('prakerins.meninggal');
+
+    //     $datas = DB::table('kecamatans')
+    //         ->select('kecamatans.nama_kecamatan',
+    //             DB::raw('sum(prakerins.positif) as positif'),
+    //             DB::raw('sum(prakerins.sembuh) as sembuh'),
+    //             DB::raw('sum(prakerins.meninggal) as meninggal'))
+    //         ->join('kotas', 'kotas.id', '=', 'kecamatans.id_kota')
+    //         ->join('kelurahans', 'kecamatans.id', '=', 'kelurahans.id_kecamatan')
+    //         ->join('rws', 'kelurahans.id', '=', 'rws.id_kelurahan')
+    //         ->join('prakerins', 'rws.id', '=', 'prakerins.id_rw')
+    //         ->where('kotas.id', $id)
+    //         ->groupBy('kecamatans.id')
+    //         ->get();
+    //     // dd($positif);
+    //     $kota = Kota::findOrFail($id);
+    //     return view('singleKota', compact('datas', 'sembuh', 'meninggal', 'positif', 'kota'));
+    // }
 
 }

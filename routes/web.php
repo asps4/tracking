@@ -50,3 +50,5 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
 
  //Frontend
  Route::resource('/',FontController::class);
+ Route::get('/provinsi/{id}',[FrontController::class,'getKotaProvinsi']);
+Route::get('/kota/{id}',[FrontController::class,'getKecamatanKota']);

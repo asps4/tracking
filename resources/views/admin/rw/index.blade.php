@@ -28,7 +28,7 @@
                         <tr>
                             <th>No</th>
                             <th style='text-align:center;vertical-align:middle'>Kode Rw</th>
-                            <th style='text-align:center;vertical-align:middle'>Nama Rw</th>
+                            <th style='text-align:center;vertical-align:middle'>No Rw</th>
                             <th style='text-align:center;vertical-align:middle'>Kelurahan</th>
                             <center>
                                 <th style='text-align:center;vertical-align:middle' colspan="3">Action</th>

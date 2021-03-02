@@ -10,11 +10,11 @@
 		 	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 			  <meta name="yandex-verification" content="9d8feb20e4e8d265" />
-  			<link rel="shortcut icon" href="../uploads/fav.png">
+  			<link rel="shortcut icon" href="../img/fav.png">
   			<meta name="description" content="Informasi data terbaru mengenai kasus Virus Corona di seluruh dunia. Data di website kawalcorona.com akan selalu di update secara otomatis dan berasal dari Johns Hopkins University">
   			<meta name="keywords" content="Data Corona, Informasi Data Corona">
-  			<meta property="og:image" content="https://kawalcorona.com//uploads/thumbnail.jpg" />
-  			<meta name="twitter:image" content="https://kawalcorona.com//uploads/thumbnail.jpg">
+  			<meta property="og:image" content="https://kawalcorona.com//img/thumbnail.jpg" />
+  			<meta name="twitter:image" content="https://kawalcorona.com//img/thumbnail.jpg">
 
 		<!-- BOOTSTRAP CSS -->
 		<link href="{{asset('assets/data/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />
@@ -53,8 +53,8 @@
 							<a class="animated-arrow hor-toggle horizontal-navtoggle"><span></span></a>
 							<div class="">
 								<a class="header-brand1" href="https://kawalcorona.com/">
-									{{-- <img src="{{asset('assets/uploads/logo-ehi.png" class="header-brand-img desktop-logo')}}" alt="logo">
-									<img src="{{asset('assets/uploads/logo-ehi.png" class="header-brand-img light-logo')}}" alt="logo"> --}}
+									{{-- <img src="{{asset('assets/img/logo-ehi.png" class="header-brand-img desktop-logo')}}" alt="logo">
+									<img src="{{asset('assets/img/logo-ehi.png" class="header-brand-img light-logo')}}" alt="logo"> --}}
 								</a><!-- LOGO -->
 							</div>
 							<div class="d-flex  ml-auto header-right-icons header-search-icon">
@@ -78,8 +78,8 @@
 						<div class="d-flex">
 							<a class="animated-arrow hor-toggle horizontal-navtoggle"><span></span></a>
 							<a class="header-brand" href="https://kawalcorona.com/">
-								{{-- <img src="../uploads/logo-ehi.png" class="header-brand-img desktop-logo" alt="logo">
-								<img src="../uploads/logo-ehi.png" class="header-brand-img desktop-logo mobile-light" alt="logo"> --}}
+								{{-- <img src="../img/logo-ehi.png" class="header-brand-img desktop-logo" alt="logo">
+								<img src="../img/logo-ehi.png" class="header-brand-img desktop-logo mobile-light" alt="logo"> --}}
 							</a>
 							<div class="d-flex order-lg-2 ml-auto header-right-icons">
 
@@ -119,7 +119,7 @@
 												<h2 class="mb-0 number-font">106,865,939</h2>
 												<p class="text-white mb-0">ORANG</p>
 											</div>
-											<div class="ml-auto"> <img src="../uploads/sad-u6e.png" width="50" height="50" alt="Positif"> </div>
+											<div class="ml-auto"> <img src="{{asset('assets/img/sad-u6e.png')}}" width="40" height="40" alt="Positif"> </div>
 										</div>
 									</div>
 								</div>
@@ -133,7 +133,7 @@
 												<h2 class="mb-0 number-font">59,697,012</h2>
 												<p class="text-white mb-0">ORANG</p>
 											</div>
-											<div class="ml-auto"> <img src="../uploads/happy-ipM.png" width="50" height="50" alt="Positif"> </div>
+											<div class="ml-auto"> <img src="{{asset('assets/img/happy-ipM.png')}}" width="40" height="40" alt="Positif"> </div>
 										</div>
 									</div>
 								</div>
@@ -147,7 +147,7 @@
 												<h2 class="mb-0 number-font">2,338,189</h2>
 												<p class="text-white mb-0">ORANG</p>
 											</div>
-											<div class="ml-auto"> <img src="../uploads/emoji-LWx.png" width="50" height="50" alt="Positif"> </div>
+											<div class="ml-auto"> <img src="{{asset('assets/img/emoji-LWx.png')}}" width="40" height="40" alt="Positif"> </div>
 										</div>
 									</div>
 								</div>
@@ -162,7 +162,7 @@
 												<p class="text-white mb-0"><b>1,174,779</b> POSITIF, <b>973,452</b> SEMBUH, <b>31,976</b> MENINGGAL</p>
 											</div>
 
-											<div class="ml-auto"> <img src="../uploads/indonesia-PZq.png" width="50" height="50" alt="Positif"> </div>
+											<div class="ml-auto"> <img src="{{asset('assets/img/indonesia-PZq.png')}}" width="40" height="40" alt="Positif"> </div>
 										</div>
 									</div>
 								</div>
@@ -224,7 +224,7 @@
 								</div>
 							</div></a><!-- COL END -->
 							<div class="col-md-12 col-xl-6">
-								<a href="https://www.kompas.com/tren/read/2020/03/03/183500265/infografik-daftar-100-rumah-sakit-rujukan-penanganan-virus-corona">
+								<a href="https://www.kompas.com/tren/read/2020/03/03/183400265/infografik-daftar-100-rumah-sakit-rujukan-penanganan-virus-corona">
 								<div class="card text-white bg-secondary">
 									<div class="card-body">
 										<h4 class="card-title">Daftar 100 Rumah Sakit Rujukan Penanganan Virus Corona</h4>
@@ -276,7 +276,7 @@
 													</ul>
 												</div> --}}
 												<div class="col-lg-12 col-sm-12 mt-3 mt-lg-0 text-center">
-													<br><a href="https://hack.co.id/"><img src="../uploads/logo-ehi.png" alt="Ethical Hacker Indonesia" width="172" height="45"></a><br><br>
+													<br><a href="https://hack.co.id/"><img src="../img/logo-ehi.png" alt="Ethical Hacker Indonesia" width="172" height="45"></a><br><br>
 													Powered by <a href="https://hack.co.id/" target="_blank">Ethical Hacker Indonesia</a>. Made with <i class="fa fa-heart"></i> by <a href="https://teguh.co" target="_blank">Teguh Aprianto</a>
 												</div>
 											</div>

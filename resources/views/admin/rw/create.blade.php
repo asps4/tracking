@@ -12,8 +12,8 @@
                         <div class="form-group">
                             <label>Kode Rw</label>
                             <input type="number" name="kode_rw" class="form-control" placeholder="Kode Rw" required autofocus>
-                            <label>Nama Rw</label>
-                            <input type="text" name="nama_rw" class="form-control" placeholder="Nama Rw" required>
+                            <label>No Rw</label>
+                            <input type="text" name="nama_rw" class="form-control" placeholder="NO Rw" required>
 
                             <label>Kelurahan</label>
                             <select name="id_kelurahan" class="form-control">

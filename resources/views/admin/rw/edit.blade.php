@@ -13,7 +13,7 @@
                         <div class="form-group">
                             <label>Kode rw</label>
                             <input type="number" name="kode_rw" class="form-control" value="{{ $rw->kode_rw }}" placeholder="Kode rw" required autofocus>
-                            <label>Nama rw</label>
+                            <label>No rw</label>
                             <input type="text" name="nama_rw" class="form-control" value="{{ $rw->nama_rw }}" placeholder="Nama rw" required>
                             <label>Nama kelurahan</label>
                             <select name="id_kelurahan" class="form-control" required>
